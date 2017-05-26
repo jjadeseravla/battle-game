@@ -24,13 +24,11 @@ attr_reader :current_turn
   end
 
   def switch_turn
-    if @current_turn = player_1
-      @current_turn = player_2
-      player_2
-    else
-      @current_turn = player_1
-      player_1
-    end
+    @current_turn = opponent_of(current_turn)
+  end
+
+  def opponent_of(the_player)
+    @players.select{ |player| player != the_player }.first
   end
 
 
