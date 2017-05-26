@@ -2,9 +2,9 @@ require 'game'
 
 describe Game do
 
-  subject(:game) {described_class.new}
   let(:jade) { double('Jade', attack:'' ) }
   let(:lubos) { double('Lubos', get_damaged:'') }
+  subject(:game) {described_class.new(jade, lubos)}
 
   describe '#attack' do
     it "attacks the opponent" do
@@ -12,5 +12,7 @@ describe Game do
       game.attack(lubos)
     end
   end
+
+
 
 end
