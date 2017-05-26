@@ -16,13 +16,13 @@ describe Player do
       expect(jade.hp).to eq described_class::DEFAULT_HP
     end
   end
-
-  describe '#attack' do
-    it "attacks the opponent" do
-      expect(lubos).to receive(:get_damaged)
-      jade.attack(lubos)
-    end
-  end
+  #
+  # describe '#attack' do
+  #   it "attacks the opponent" do
+  #     expect(lubos).to receive(:get_damaged)
+  #     jade.attack(lubos)
+  #   end
+  # end
 
   describe '#get_damaged' do
     it "should deduct 10 points from HP" do
