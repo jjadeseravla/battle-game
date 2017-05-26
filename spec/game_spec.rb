@@ -25,10 +25,11 @@ describe Game do
       expect(game.current_turn).to eq jade
     end
   end
-  
+
   describe '#switch_turn' do
     it "after first attack, switch to opponent" do
-      expect(game.switch_turn).to eq lubos
+      game.switch_turn
+      expect(game.current_turn).to eq lubos
     end
   end
 

@@ -19,12 +19,8 @@ attr_reader :current_turn
     target.get_damaged
   end
 
-  def current_turn
-    @current_turn = player_1
-  end
-
   def switch_turn
-    @current_turn = opponent_of(current_turn)
+    @current_turn = opponent_of(@current_turn)
   end
 
   def opponent_of(the_player)
