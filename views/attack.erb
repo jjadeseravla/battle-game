@@ -1,4 +1,4 @@
-<%= @game.player_1.name %> has attacked <%= @game.player_2.name %>
+<%= @game.opponent_of(@game.current_turn).name  %> has attacked <%= @game.current_turn.name%>
 <form action="/play" method="get">
   <input type="submit" value="back to play">
 </form>
